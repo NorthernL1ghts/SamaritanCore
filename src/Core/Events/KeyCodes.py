@@ -1,0 +1,253 @@
+class KeyCodes:
+    # From glfw3.h
+    Space = 32
+    Apostrophe = 39  # '
+    Comma = 44       # ,
+    Minus = 45       # -
+    Period = 46      # .
+    Slash = 47       # /
+
+    D0 = 48  # 0
+    D1 = 49  # 1
+    D2 = 50  # 2
+    D3 = 51  # 3
+    D4 = 52  # 4
+    D5 = 53  # 5
+    D6 = 54  # 6
+    D7 = 55  # 7
+    D8 = 56  # 8
+    D9 = 57  # 9
+
+    Semicolon = 59  # ;
+    Equal = 61      # =
+
+    A = 65
+    B = 66
+    C = 67
+    D = 68
+    E = 69
+    F = 70
+    G = 71
+    H = 72
+    I = 73
+    J = 74
+    K = 75
+    L = 76
+    M = 77
+    N = 78
+    O = 79
+    P = 80
+    Q = 81
+    R = 82
+    S = 83
+    T = 84
+    U = 85
+    V = 86
+    W = 87
+    X = 88
+    Y = 89
+    Z = 90
+
+    LeftBracket = 91    # [
+    Backslash = 92      # \
+    RightBracket = 93   # ]
+    GraveAccent = 96    # `
+
+    World1 = 161  # non-US #1
+    World2 = 162  # non-US #2
+
+    # Function keys
+    Escape = 256
+    Enter = 257
+    Tab = 258
+    Backspace = 259
+    Insert = 260
+    Delete = 261
+    Right = 262
+    Left = 263
+    Down = 264
+    Up = 265
+    PageUp = 266
+    PageDown = 267
+    Home = 268
+    End = 269
+    CapsLock = 280
+    ScrollLock = 281
+    NumLock = 282
+    PrintScreen = 283
+    Pause = 284
+    F1 = 290
+    F2 = 291
+    F3 = 292
+    F4 = 293
+    F5 = 294
+    F6 = 295
+    F7 = 296
+    F8 = 297
+    F9 = 298
+    F10 = 299
+    F11 = 300
+    F12 = 301
+    F13 = 302
+    F14 = 303
+    F15 = 304
+    F16 = 305
+    F17 = 306
+    F18 = 307
+    F19 = 308
+    F20 = 309
+    F21 = 310
+    F22 = 311
+    F23 = 312
+    F24 = 313
+    F25 = 314
+
+    # Keypad
+    KP0 = 320
+    KP1 = 321
+    KP2 = 322
+    KP3 = 323
+    KP4 = 324
+    KP5 = 325
+    KP6 = 326
+    KP7 = 327
+    KP8 = 328
+    KP9 = 329
+    KPDecimal = 330
+    KPDivide = 331
+    KPMultiply = 332
+    KPSubtract = 333
+    KPAdd = 334
+    KPEnter = 335
+    KPEqual = 336
+
+    LeftShift = 340
+    LeftControl = 341
+    LeftAlt = 342
+    LeftSuper = 343
+    RightShift = 344
+    RightControl = 345
+    RightAlt = 346
+    RightSuper = 347
+    Menu = 348
+
+class KeyState:
+    None = -1
+    Pressed = 0
+    Held = 1
+    Released = 2
+
+class CursorMode:
+    Normal = 0
+    Hidden = 1
+    Locked = 2
+
+class MouseButton:
+    Button0 = 0
+    Button1 = 1
+    Button2 = 2
+    Button3 = 3
+    Button4 = 4
+    Button5 = 5
+    Left = Button0
+    Right = Button1
+    Middle = Button2
+
+# SC_ Macros
+SC_KEY_SPACE = KeyCodes.Space
+SC_KEY_APOSTROPHE = KeyCodes.Apostrophe
+SC_KEY_COMMA = KeyCodes.Comma
+SC_KEY_MINUS = KeyCodes.Minus
+SC_KEY_PERIOD = KeyCodes.Period
+SC_KEY_SLASH = KeyCodes.Slash
+SC_KEY_0 = KeyCodes.D0
+SC_KEY_1 = KeyCodes.D1
+SC_KEY_2 = KeyCodes.D2
+SC_KEY_3 = KeyCodes.D3
+SC_KEY_4 = KeyCodes.D4
+SC_KEY_5 = KeyCodes.D5
+SC_KEY_6 = KeyCodes.D6
+SC_KEY_7 = KeyCodes.D7
+SC_KEY_8 = KeyCodes.D8
+SC_KEY_9 = KeyCodes.D9
+SC_KEY_SEMICOLON = KeyCodes.Semicolon
+SC_KEY_EQUAL = KeyCodes.Equal
+SC_KEY_A = KeyCodes.A
+SC_KEY_B = KeyCodes.B
+SC_KEY_C = KeyCodes.C
+SC_KEY_D = KeyCodes.D
+SC_KEY_E = KeyCodes.E
+SC_KEY_F = KeyCodes.F
+SC_KEY_G = KeyCodes.G
+SC_KEY_H = KeyCodes.H
+SC_KEY_I = KeyCodes.I
+SC_KEY_J = KeyCodes.J
+SC_KEY_K = KeyCodes.K
+SC_KEY_L = KeyCodes.L
+SC_KEY_M = KeyCodes.M
+SC_KEY_N = KeyCodes.N
+SC_KEY_O = KeyCodes.O
+SC_KEY_P = KeyCodes.P
+SC_KEY_Q = KeyCodes.Q
+SC_KEY_R = KeyCodes.R
+SC_KEY_S = KeyCodes.S
+SC_KEY_T = KeyCodes.T
+SC_KEY_U = KeyCodes.U
+SC_KEY_V = KeyCodes.V
+SC_KEY_W = KeyCodes.W
+SC_KEY_X = KeyCodes.X
+SC_KEY_Y = KeyCodes.Y
+SC_KEY_Z = KeyCodes.Z
+SC_KEY_LEFT_BRACKET = KeyCodes.LeftBracket
+SC_KEY_BACKSLASH = KeyCodes.Backslash
+SC_KEY_RIGHT_BRACKET = KeyCodes.RightBracket
+SC_KEY_GRAVE_ACCENT = KeyCodes.GraveAccent
+SC_KEY_WORLD_1 = KeyCodes.World1
+SC_KEY_WORLD_2 = KeyCodes.World2
+SC_KEY_ESCAPE = KeyCodes.Escape
+SC_KEY_ENTER = KeyCodes.Enter
+SC_KEY_TAB = KeyCodes.Tab
+SC_KEY_BACKSPACE = KeyCodes.Backspace
+SC_KEY_INSERT = KeyCodes.Insert
+SC_KEY_DELETE = KeyCodes.Delete
+SC_KEY_RIGHT = KeyCodes.Right
+SC_KEY_LEFT = KeyCodes.Left
+SC_KEY_DOWN = KeyCodes.Down
+SC_KEY_UP = KeyCodes.Up
+SC_KEY_PAGE_UP = KeyCodes.PageUp
+SC_KEY_PAGE_DOWN = KeyCodes.PageDown
+SC_KEY_HOME = KeyCodes.Home
+SC_KEY_END = KeyCodes.End
+SC_KEY_CAPS_LOCK = KeyCodes.CapsLock
+SC_KEY_SCROLL_LOCK = KeyCodes.ScrollLock
+SC_KEY_NUM_LOCK = KeyCodes.NumLock
+SC_KEY_PRINT_SCREEN = KeyCodes.PrintScreen
+SC_KEY_PAUSE = KeyCodes.Pause
+SC_KEY_F1 = KeyCodes.F1
+SC_KEY_F2 = KeyCodes.F2
+SC_KEY_F3 = KeyCodes.F3
+SC_KEY_F4 = KeyCodes.F4
+SC_KEY_F5 = KeyCodes.F5
+SC_KEY_F6 = KeyCodes.F6
+SC_KEY_F7 = KeyCodes.F7
+SC_KEY_F8 = KeyCodes.F8
+SC_KEY_F9 = KeyCodes.F9
+SC_KEY_F10 = KeyCodes.F10
+SC_KEY_F11 = KeyCodes.F11
+SC_KEY_F12 = KeyCodes.F12
+SC_KEY_F13 = KeyCodes.F13
+SC_KEY_F14 = KeyCodes.F14
+SC_KEY_F15 = KeyCodes.F15
+SC_KEY_F16 = KeyCodes.F16
+SC_KEY_F17 = KeyCodes.F17
+SC_KEY_F18 = KeyCodes.F18
+SC_KEY_F19 = KeyCodes.F19
+SC_KEY_F20 = KeyCodes.F20
+SC_KEY_F21 = KeyCodes.F21
+SC_KEY_F22 = KeyCodes.F22
+SC_KEY_F23 = KeyCodes.F23
+SC_KEY_F24 = KeyCodes.F24
+SC_KEY_F25 = KeyCodes.F25
+
+# You can access keys with the defined SC_ macros, for example:
+# print(SC_KEY_A)
