@@ -1,5 +1,6 @@
 import os
 import datetime
+import threading
 
 class LogLevel:
     TRACE = 0
@@ -17,15 +18,16 @@ SC_CORE_WARNING = LogLevel.WARNING
 SC_CORE_ERROR = LogLevel.ERROR
 SC_CORE_CRITICAL = LogLevel.CRITICAL
 
-# Macros for logging messages
-SC_LOG_CORE = lambda level, msg, *args: Logger.s_CoreLogger.Log(level, msg, *args)
-SC_LOG_CLIENT = lambda level, msg, *args: Logger.s_ClientLogger.Log(level, msg, *args)
+# Macros for logging messages with safe checking if loggers are initialized
+SC_LOG_CORE = lambda level, msg, *args: Logger.s_CoreLogger.Log(level, msg, *args) if Logger.s_CoreLogger is not None else None
+SC_LOG_CLIENT = lambda level, msg, *args: Logger.s_ClientLogger.Log(level, msg, *args) if Logger.s_ClientLogger is not None else None
 
 class Logger:
     s_CoreLogger = None
     s_ClientLogger = None
     s_Pattern = "[{timestamp}] [{name}] - {level} - {message}"
     s_FileName = None
+    s_Lock = threading.Lock()  # Ensuring thread-safety for file writes
 
     @classmethod
     def Init(cls):
@@ -60,12 +62,16 @@ class Logger:
                 level=self.GetLevelName(level),
                 message=formatted_message
             )
-            print(log_message)
             self.WriteToFile(log_message)
 
     def WriteToFile(self, message):
-        with open(self.m_FileName, 'a') as log_file:
-            log_file.write(message + '\n')
+        try:
+            with self.s_Lock:
+                with open(self.m_FileName, 'a') as log_file:
+                    log_file.write(message + '\n')
+        except Exception as e:
+            if self.m_Level <= LogLevel.ERROR:
+                print(f"Error writing to log file: {e}")
 
     def Trace(self, message, *args):
         self.Log(LogLevel.TRACE, message, *args)
@@ -113,6 +119,31 @@ class Logger:
         cls.s_Pattern = pattern
 
     @classmethod
+    def ResetLogger(cls, logger):
+        if logger:
+            logger.DropAll()
+        return None
+
+    def DropAll(self):
+        try:
+            self.Info(f"Dropping all logs for {self.m_Name}.")
+            # Additional cleanups can be added here
+        except Exception as e:
+            self.Error(f"Failed to drop logs: {e}")
+
+    @classmethod
     def Shutdown(cls):
-        # Perform any cleanup operations before shutdown
-        print("Shutting down logger...")
+        core_logger = cls.GetCoreLogger()
+        if core_logger:
+            core_logger.Info("Shutting down core logger...")
+        client_logger = cls.GetClientLogger()
+        if client_logger:
+            client_logger.Info("Shutting down client logger...")
+
+        cls.s_CoreLogger = cls.ResetLogger(core_logger)
+        cls.s_ClientLogger = cls.ResetLogger(client_logger)
+
+        if core_logger:
+            core_logger.Info("Core logger has been reset and dropped.")
+        if client_logger:
+            client_logger.Info("Client logger has been reset and dropped.")
