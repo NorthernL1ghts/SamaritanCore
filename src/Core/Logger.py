@@ -30,8 +30,8 @@ class Logger:
     @classmethod
     def Init(cls):
         cls.CreateLogFolder()
-        cls.s_CoreLogger = cls("SamaritanCore", os.path.join("logs", "SamaritanCore", "SamaritanCore.log"))
-        cls.s_ClientLogger = cls("APP", os.path.join("logs", "APP", "App.log"))
+        cls.s_CoreLogger = cls("SamaritanCore", os.path.join("../logs", "SamaritanCore", "SamaritanCore.log"))
+        cls.s_ClientLogger = cls("APP", os.path.join("../logs", "APP", "App.log"))
         cls.s_CoreLogger.SetLevel(LogLevel.TRACE)  # Default level for core logger
         cls.s_ClientLogger.SetLevel(LogLevel.DEBUG)  # Default level for client logger
         cls.SetPattern("[{timestamp}] [{name}] - {level} - {message}")  # Set log pattern
@@ -39,8 +39,8 @@ class Logger:
     @classmethod
     def CreateLogFolder(cls):
         # Create logs directory structure
-        os.makedirs(os.path.join("logs", "SamaritanCore"), exist_ok=True)
-        os.makedirs(os.path.join("logs", "APP"), exist_ok=True)
+        os.makedirs(os.path.join("../logs", "SamaritanCore"), exist_ok=True)
+        os.makedirs(os.path.join("../logs", "APP"), exist_ok=True)
 
     def __init__(self, name, file_name):
         self.m_Name = name

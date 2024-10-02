@@ -1,5 +1,5 @@
 from Event import Event
-from KeyCodes import KeyCode  # Assuming you have a KeyCode class similar to MouseButton
+from Input.KeyCodes import KeyCode  # Assuming you have a KeyCode class similar to MouseButton
 import string
 import io
 
