@@ -1,9 +1,10 @@
-from Logger import *  # Assuming you have a Logger module for Loggerging
+from Logger import *
 
-# Platform checks
+# STL
 import platform
 import sys
 
+# Platform checks
 if platform.system() == 'Windows':
     def SC_DEBUG_BREAK():
         import ctypes
@@ -17,7 +18,7 @@ else:  # Other platforms
         pass
 
 # Debug mode check
-SC_DEBUG = True  # Set this to True to enable asserts
+SC_DEBUG = True  # NOTE: Set this to True to enable asserts
 
 SC_ENABLE_VERIFY = True
 
