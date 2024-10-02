@@ -1,5 +1,4 @@
 class KeyCodes:
-    # From glfw3.h
     Space = 32
     Apostrophe = 39  # '
     Comma = 44       # ,

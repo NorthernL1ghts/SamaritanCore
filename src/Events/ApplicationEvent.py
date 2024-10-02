@@ -25,7 +25,6 @@ class WindowResizeEvent(Event):
     def __str__(self) -> str:
         return f"WindowResizeEvent: {self.m_Width}, {self.m_Height}"
 
-
 class WindowMinimizeEvent(Event):
     def __init__(self, minimized: bool):
         super().__init__()
@@ -43,7 +42,6 @@ class WindowMinimizeEvent(Event):
     def GetCategoryFlags(self) -> int:
         return EventCategory.EventCategoryApplication.value
 
-
 class WindowCloseEvent(Event):
     def __init__(self):
         super().__init__()
@@ -56,7 +54,6 @@ class WindowCloseEvent(Event):
 
     def GetCategoryFlags(self) -> int:
         return EventCategory.EventCategoryApplication.value
-
 
 class WindowTitleBarHitTestEvent(Event):
     def __init__(self, x: int, y: int, hit: np.ndarray):

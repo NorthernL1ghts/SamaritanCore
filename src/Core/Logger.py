@@ -151,3 +151,10 @@ class Logger:
             core_logger.Info("Core logger has been reset and dropped.")
         if client_logger:
             client_logger.Info("Client logger has been reset and dropped.")
+
+    @classmethod
+    def PrintAssertMessage(cls, log_type, message, *args):
+        if log_type == "Core":
+            SC_LOG_CORE(LogLevel.ERROR, message, *args)
+        elif log_type == "Client":
+            SC_LOG_CLIENT(LogLevel.ERROR, message, *args)
