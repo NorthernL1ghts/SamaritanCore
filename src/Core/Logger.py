@@ -10,6 +10,11 @@ class LogLevel:
     ERROR = 4
     CRITICAL = 5
 
+# Constants for log folder locations
+c_LogsFolderLocation = r"C:\Dev\Samaritan\SamaritanCore\logs"  # Base log folder
+c_SamaritanCoreLogFolder = os.path.join(c_LogsFolderLocation, "SamaritanCore")
+c_APPLogFolder = os.path.join(c_LogsFolderLocation, "APP")
+
 # Macros for logging levels
 SC_CORE_TRACE = LogLevel.TRACE
 SC_CORE_DEBUG = LogLevel.DEBUG
@@ -26,14 +31,13 @@ class Logger:
     s_CoreLogger = None
     s_ClientLogger = None
     s_Pattern = "[{timestamp}] [{name}] - {level} - {message}"
-    s_FileName = None
     s_Lock = threading.Lock()  # Ensuring thread-safety for file writes
 
     @classmethod
     def Init(cls):
-        cls.CreateLogFolder()
-        cls.s_CoreLogger = cls("SamaritanCore", os.path.join("../logs", "SamaritanCore", "SamaritanCore.log"))
-        cls.s_ClientLogger = cls("APP", os.path.join("../logs", "APP", "App.log"))
+        cls.CreateLogFolder()  # Create log folder structure
+        cls.s_CoreLogger = cls("SamaritanCore", os.path.join(c_SamaritanCoreLogFolder, "SamaritanCore.log"))
+        cls.s_ClientLogger = cls("APP", os.path.join(c_APPLogFolder, "App.log"))
         cls.s_CoreLogger.SetLevel(LogLevel.TRACE)  # Default level for core logger
         cls.s_ClientLogger.SetLevel(LogLevel.DEBUG)  # Default level for client logger
         cls.SetPattern("[{timestamp}] [{name}] - {level} - {message}")  # Set log pattern
@@ -41,8 +45,8 @@ class Logger:
     @classmethod
     def CreateLogFolder(cls):
         # Create logs directory structure
-        os.makedirs(os.path.join("../logs", "SamaritanCore"), exist_ok=True)
-        os.makedirs(os.path.join("../logs", "APP"), exist_ok=True)
+        os.makedirs(c_SamaritanCoreLogFolder, exist_ok=True)
+        os.makedirs(c_APPLogFolder, exist_ok=True)
 
     def __init__(self, name, file_name):
         self.m_Name = name

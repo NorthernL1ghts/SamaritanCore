@@ -12,11 +12,12 @@ class Application:
 
     def __init__(self):
         self.m_ApplicationSpecification = None
-        self.m_ApplicationSettings = ApplicationSettings()  # Create an instance of ApplicationSettings
+        self.m_ApplicationSettings = None  # Create an instance of ApplicationSettings
 
     def InitializeComponents(self):
         Logger.Init()
-
+        self.m_ApplicationSettings = ApplicationSettings()
+        
         # Load settings if needed
         if self.m_ApplicationSettings.Deserialize():
             SC_LOG_CORE(SC_CORE_INFO, "Loaded application settings.")
