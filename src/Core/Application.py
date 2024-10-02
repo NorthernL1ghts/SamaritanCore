@@ -5,6 +5,8 @@ from Base import Base
 
 # STL
 import threading
+import sys
+import os
 
 class Application(Base):
     class ApplicationSpecification:
@@ -53,9 +55,9 @@ class Application(Base):
         Logger.GetCoreLogger().Log(SC_CORE_INFO, "Application shutdown complete.")
 
     @staticmethod
-    def CreateApplication():
+    def CreateApplication(argc, argv):
         if Application.s_Instance is None:
-            Application.s_Instance = Application()
+            Application.s_Instance = Application()  # Heap allocation of Application instance
         return Application.s_Instance
 
     @staticmethod
@@ -68,9 +70,9 @@ class Application(Base):
 
 class EntryPoint:
     @staticmethod
-    def Main():
-        application = Application.CreateApplication()
+    def Main(argc, argv):
+        application = Application.CreateApplication(argc, argv)
         application.Run()
 
 if __name__ == "__main__":
-    EntryPoint.Main()
+    EntryPoint.Main(len(sys.argv), sys.argv)
