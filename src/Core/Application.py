@@ -2,6 +2,7 @@ from Globals import Globals
 from Logger import *
 from ApplicationSettings import ApplicationSettings
 from Base import Base
+from GLFWWindow import GLFWWindow
 
 # STL
 import threading
@@ -20,10 +21,14 @@ class Application(Base):
     def __init__(self):
         self.m_ApplicationSpecification = None
         self.m_ApplicationSettings = None
+
         self.m_Base = Base()
         self.m_Base.SetApplication(self)
         Application.s_Instance = self
         Application.s_MainThreadID = threading.get_ident()
+
+        # Create GLFW window
+        self.m_GLFWWindow = GLFWWindow(800, 600, "SamaritanCore")
 
     def InitializeCore(self):
         self.m_Base.InitializeCore()
@@ -42,6 +47,9 @@ class Application(Base):
     def Run(self):
         self.m_ApplicationSpecification = Application.ApplicationSpecification("SamaritanCore", "1.0")
         self.InitializeCore()
+
+        # Run GLFW window
+        self.m_GLFWWindow.Run()
 
         while Globals.g_ApplicationRunning:
             Logger.GetCoreLogger().Log(SC_CORE_DEBUG, "Application is running...")
