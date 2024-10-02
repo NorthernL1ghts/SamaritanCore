@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+*.whl
+.mypy_cache/
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+*.db
+*.sqlite3
+
+# C++
+# Build directories
+build/
+bin/
+obj/
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.out
+*.app
+*.class
+*.log
+
+# IDE specific files
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.idea/
+.vscode/
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+*.user
+*.ninja
+
+# Other system files
+*.DS_Store
+Thumbs.db
+*.vscode/

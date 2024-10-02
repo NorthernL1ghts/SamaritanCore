@@ -1,0 +1,56 @@
+# Set the default behavior for all text files
+* text=auto
+
+# Handle line endings
+*.c    text
+*.cpp  text
+*.h    text
+*.py   text
+*.java  text
+*.js    text
+*.html  text
+*.css   text
+*.xml   text
+
+# Specify merge strategies for specific files
+*.md   merge=union
+*.rst  merge=union
+*.json merge=union
+
+# Treat specific files as binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.zip  binary
+*.tar  binary
+*.gz   binary
+
+# Custom attributes
+*.log  linguist-language=Log
+*.json linguist-language=JSON
+*.yaml linguist-language=YAML
+*.yml  linguist-language=YAML
+*.txt  text
+
+# Mark framework-specific files
+*.config  text
+*.csproj   text
+*.sln      text
+*.cs       text
+*.php      text
+
+# Documentation files
+*.pdf  binary
+*.doc  binary
+*.docx binary
+*.ppt  binary
+*.pptx binary
+
+# Set merge strategies for specific file types
+*.lock   merge=ours
+*.pyc    binary
+*.class  binary
+*.jar    binary
+
+# End of file

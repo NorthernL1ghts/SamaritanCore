@@ -1,0 +1,12 @@
+{
+    "SamaritanCore Application Settings": {
+        "WindowTitle": "Samaritan Core Application",
+        "WindowWidth": 1280,
+        "WindowHeight": 720,
+        "MaxThreads": 16,
+        "LogLevel": "INFO",
+        "DatabasePath": "C:/SamaritanCore/database.db",
+        "EnableLogging": true,
+        "Version": "1.0.0"
+    }
+}
