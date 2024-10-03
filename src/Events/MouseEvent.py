@@ -1,7 +1,6 @@
+from Core.SCPCH import *
 from Event import Event
 from Input.KeyCodes import MouseButton
-import string
-import io
 
 class MouseMovedEvent(Event):
     def __init__(self, x, y):

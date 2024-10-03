@@ -1,5 +1,5 @@
 from Event import Event, EventCategory, EventType
-import numpy as np  # For reference in WindowTitleBarHitTestEvent
+from Core.SCPCH import *
 
 class WindowResizeEvent(Event):
     def __init__(self, width: int, height: int):

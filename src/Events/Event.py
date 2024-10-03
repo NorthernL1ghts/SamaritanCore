@@ -1,5 +1,4 @@
-from enum import Enum, auto
-from typing import Callable, TypeVar, Any
+from Core.SCPCH import *
 
 class EventType(Enum):
     NoneType = auto()
@@ -21,14 +20,8 @@ class EventType(Enum):
     MouseButtonDown = auto()
     MouseMoved = auto()
     MouseScrolled = auto()
-    ScenePreStart = auto()
-    ScenePostStart = auto()
-    ScenePreStop = auto()
-    ScenePostStop = auto()
-    EditorExitPlayMode = auto()
     SelectionChanged = auto()
     AssetReloaded = auto()
-    AnimationGraphCompiled = auto()
 
 class EventCategory(Enum):
     NoneType = 0

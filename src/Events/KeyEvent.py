@@ -1,7 +1,6 @@
+from Core.SCPCH import *
 from Event import Event
 from Input.KeyCodes import KeyCode  # Assuming you have a KeyCode class similar to MouseButton
-import string
-import io
 
 class KeyEvent(Event):
     def __init__(self, keycode):
