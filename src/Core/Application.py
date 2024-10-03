@@ -28,7 +28,7 @@ class Application(Base):
         Application.s_MainThreadID = threading.get_ident()
 
         # Create GLFW window
-        self.m_GLFWWindow = GLFWWindow(800, 600, "SamaritanCore")
+        self.m_GLFWWindow = GLFWWindow(800, 600, "SamaritanCore.exe")
 
     def InitializeCore(self):
         self.m_Base.InitializeCore()
