@@ -4,10 +4,7 @@ from ApplicationSettings import ApplicationSettings
 from Base import Base
 from GLFWWindow import GLFWWindow
 
-# STL
-import threading
-import sys
-import os
+from SCPCH import *
 
 class Application(Base):
     class ApplicationSpecification:

@@ -1,6 +1,6 @@
 class Layer:
     def __init__(self, name: str):
-        self.name = name
+        self.m_Name = name
 
     def OnAttach(self):
         """Called when the layer is attached to the stack."""

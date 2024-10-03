@@ -1,5 +1,5 @@
 from Logger import *  # Import the Logger here for initialization
-import platform
+from SCPCH import platform
 
 # Macros
 def BIT(x):
@@ -8,9 +8,6 @@ def BIT(x):
 # Platform checks
 if not (platform.system() == 'Windows' or platform.system() == 'Linux'):
     raise RuntimeError("Unknown platform.")
-
-# Atomic flag implementation
-from threading import Lock
 
 class AtomicFlag:
     def __init__(self):

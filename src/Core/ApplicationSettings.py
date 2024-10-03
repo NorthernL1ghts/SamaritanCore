@@ -1,6 +1,4 @@
-import os
-import json
-from pathlib import Path
+from SCPCH import *
 
 class ApplicationSettings:
     # Universal project path

@@ -1,6 +1,4 @@
-import os
-import datetime
-import threading
+from SCPCH import *
 
 class LogLevel:
     TRACE = 0

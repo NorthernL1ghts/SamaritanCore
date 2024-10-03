@@ -1,8 +1,5 @@
 from Logger import *
-
-# STL
-import platform
-import sys
+from SCPCH import platform, sys
 
 # Platform checks
 if platform.system() == 'Windows':

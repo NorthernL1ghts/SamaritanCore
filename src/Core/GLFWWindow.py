@@ -1,5 +1,5 @@
 from Window import Window
-import glfw
+from SCPCH import *
 
 class GLFWWindow(Window):
     def __init__(self, width, height, title):
