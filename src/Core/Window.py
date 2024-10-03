@@ -1,5 +1,5 @@
-from OpenGL.GL import *
 import numpy as np
+from OpenGL.GL import *
 
 class Window:
     def __init__(self, width, height, title):
@@ -56,7 +56,8 @@ class Window:
         out vec4 color;
         void main()
         {
-            color = vec4(0.3, 0.5, 0.8, 1.0);  // Light blue color
+            // Set the color based on the fragment position for a rainbow effect
+            color = vec4(gl_FragCoord.x / 800.0, gl_FragCoord.y / 600.0, 0.5, 1.0);  // Example for rainbow-like effect
         }
         """
 
@@ -89,15 +90,15 @@ class Window:
 
     def RenderTriangle(self):
         """Render a triangle."""
-        glUseProgram(self.m_ShaderProgram)
+        glUseProgram(self.m_ShaderProgram)  # Ensure the shader program is active
         glBindVertexArray(self.m_VAO)
         glDrawArrays(GL_TRIANGLES, 0, 3)
 
     def OnRender(self):
         """Clear the screen and render the triangle."""
-        glClearColor(0.1, 0.1, 0.1, 1.0)
+        glClearColor(0.1, 0.1, 0.1, 1.0)  # Clear to dark background
         glClear(GL_COLOR_BUFFER_BIT)
-        self.RenderTriangle()
+        self.RenderTriangle()  # Render the triangle
 
     def OnUpdate(self):
         """Update logic (can be overridden)."""
@@ -110,12 +111,12 @@ class Window:
         if not self.CreateWindow():
             return
 
-        self.CreateShaderProgram()
-        self.SetupBuffers()
+        self.CreateShaderProgram()  # Create the shader program
+        self.SetupBuffers()  # Set up vertex buffers and VAO
 
         while not self.ShouldClose():
             self.OnUpdate()
-            self.OnRender()
+            self.OnRender()  # Render the triangle
             self.SwapBuffers()
             self.PollEvents()
 
