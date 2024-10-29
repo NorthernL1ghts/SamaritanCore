@@ -1,0 +1,144 @@
+{
+  "recommendations": [
+    // A Node.js bundle for managing various Node.js projects and libraries efficiently.
+    "1yib.nodejs-bundle",
+    
+    // A Svelte bundle that includes useful tools and libraries for Svelte development.
+    "1yib.svelte-bundle",
+    
+    // A collection of snippets for Node.js to speed up coding.
+    "abdoseadaa.node-js-snippet",
+    
+    // An extension for managing bookmarks within Visual Studio Code.
+    "alefragnani.bookmarks",
+    
+    // IntelliSense support for Svelte, enhancing code completion and suggestions.
+    "ardenivanov.svelte-intellisense",
+    
+    // An extension to view the Git history of your project easily.
+    "donjayamanne.githistory",
+    
+    // A tool for automatically generating getter and setter methods in your code.
+    "dskwrk.vscode-generate-getter-setter",
+    
+    // Snippets for Svelte to make development faster and easier.
+    "fivethree.vscode-svelte-snippets",
+    
+    // A simple code runner that allows you to execute code directly from VS Code.
+    "formulahendry.code-runner",
+    
+    // A viewer for Excel files, allowing you to work with spreadsheets directly in VS Code.
+    "grapecity.gc-excelviewer",
+    
+    // A diagram tool integrated with VS Code for creating various types of diagrams.
+    "hediet.vscode-drawio",
+    
+    // Integration for Discord within VS Code, allowing you to manage Discord functionalities.
+    "icrawl.discord-vscode",
+    
+    // An extension for managing Discord bots and related functionalities.
+    "jock.svg",
+    
+    // A Discord-related extension for better integration within the VS Code environment.
+    "kuanhulio.discord",
+    
+    // A tool for comparing Git trees, helping you see differences between branches.
+    "letmaik.git-tree-compare",
+    
+    // A live preview of Markdown files in your editor for instant feedback on your README files.
+    "manishsencha.readme-preview",
+    
+    // A tool for working with assembly language, providing code lens functionality.
+    "maziac.asm-code-lens",
+    
+    // A CSV viewer and editor, making it easier to manipulate CSV data.
+    "mechatroner.rainbow-csv",
+    
+    // An extension for executing Node.js scripts from within VS Code.
+    "miramac.vscode-exec-node",
+    
+    // Docker support for VS Code, enabling you to build, manage, and deploy Docker containers.
+    "ms-azuretools.vscode-docker",
+    
+    // Development tools for .NET, enhancing the C# coding experience.
+    "ms-dotnettools.csdevkit",
+    
+    // C# language support with IntelliSense, debugging, and other features.
+    "ms-dotnettools.csharp",
+    
+    // Extension providing .NET runtime support for better development experience.
+    "ms-dotnettools.vscode-dotnet-runtime",
+    
+    // Debugging tools for Python, enhancing the debugging experience within VS Code.
+    "ms-python.debugpy",
+    
+    // Python language support with rich features like IntelliSense and linting.
+    "ms-python.python",
+    
+    // Pylance extension for improved performance and additional type checking for Python.
+    "ms-python.vscode-pylance",
+    
+    // Remote development support via containers, making it easier to work on remote environments.
+    "ms-vscode-remote.remote-containers",
+    
+    // Remote WSL (Windows Subsystem for Linux) support for a seamless development experience.
+    "ms-vscode-remote.remote-wsl",
+    
+    // CMake tools for building and managing CMake projects directly in VS Code.
+    "ms-vscode.cmake-tools",
+    
+    // C++ development tools providing IntelliSense, debugging, and other features.
+    "ms-vscode.cpptools",
+    
+    // A pack of tools for enhanced C++ development within VS Code.
+    "ms-vscode.cpptools-extension-pack",
+    
+    // Tools for working with Makefiles in your C++ projects.
+    "ms-vscode.makefile-tools",
+    
+    // Preview of TypeScript features and improvements in Visual Studio Code.
+    "ms-vscode.vscode-typescript-next",
+    
+    // A terminal keeper extension for better management of terminal instances in VS Code.
+    "nguyenngoclong.terminal-keeper",
+    
+    // Material icon theme for a more visually appealing file explorer.
+    "pkief.material-icon-theme",
+    
+    // Live server extension for running a local server and auto-reloading web pages.
+    "ritwickdey.liveserver",
+    
+    // A formatter integrating Prettier and ESLint for maintaining code quality.
+    "rvest.vs-code-prettier-eslint",
+    
+    // An extension for adding shader support within VS Code.
+    "slevesque.shader",
+    
+    // Standard code formatting tools to maintain consistent code style.
+    "standard.vscode-standard",
+    
+    // A spell checker extension to catch spelling mistakes in your code and comments.
+    "streetsidesoftware.code-spell-checker",
+    
+    // Svelte-specific extension to enhance the development experience.
+    "svelte.svelte-vscode",
+    
+    // CMake support for managing CMake projects and building them within VS Code.
+    "twxs.cmake",
+    
+    // RDoc preview extension for reading and previewing RDoc files.
+    "vaughan.rdoc-readme",
+    
+    // A tool for highlighting TODO comments in your code for better task management.
+    "wayou.vscode-todo-highlight",
+    
+    // An extension for surrounding selected text with specified characters or tags.
+    "yatki.vscode-surround",
+    
+    // Material theme for a fresh and modern look in the Visual Studio Code editor.
+    "zhuangtongfa.material-theme",
+    
+    // A dark theme inspired by One Dark Pro and Monokai.
+    "eserozvataf.one-dark-pro-monokai-darker"
+  ]
+}
