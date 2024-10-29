@@ -1,0 +1,135 @@
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore cached data
+*.cache
+
+# Ignore generated documentation
+/build/
+docs/
+
+# Ignore IDE-specific directories
+.idea/
+*.code-workspace
+
+# Ignore Visual Studio specific files
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Ignore Docker related files
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Ignore configuration files
+*.yaml
+*.yml
+*.cfg
+*.conf
+
+# Ignore system-specific backup files
+*.bak
+
+# Ignore database files
+*.db
+*.sqlite
+
+# Ignore test result files
+*.xml
+*.coverage
+
+# Ignore virtual environment files (pipenv)
+Pipfile.lock
+*.venv/
+.venv/
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore HTML files
+*.html
+
+# Ignore ISO files
+*.iso
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Node.js related files
+node_modules/
+
+# Ignore package manager directories
+npm-debug.log
+yarn-error.log
+
+# Ignore compiled code directories
+dist/
+build/
+
+# Ignore compiled language files
+*.class
+*.jar
+
+# Ignore compiled C/C++ files
+*.o
+*.out
+
+# Ignore macOS specific files
+.AppleDouble
+.DS_Store
+
+# Ignore system files
+Thumbs.db
+Desktop.ini
+
+# Ignore log files
+*.log
+
+# Ignore coverage files
+coverage/
+*.cover
+
+# Ignore Python wheel files
+*.whl
+
+# Ignore distribution files
+*.tar.gz
+*.zip
+
+# Ignore PSD files
+*.psd
+
+# Ignore other non-source files
+*.info
+*.pak
+*.tmp
+*.bak
+
+# Ignore Visual Studio build artifacts
+Debug/
+Release/
+x64/
+x86/
+bin/
+obj/
+
+# Ignore other compilation files
+*.pdb
+*.idb
+*.ilk
+*.log
+
+# Ignore additional irrelevant project files
+*.tmp
+*.cache
+*.out
+*.class
+*.jar
+*.pb
