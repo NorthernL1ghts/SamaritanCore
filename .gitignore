@@ -4,23 +4,46 @@
 *.so
 *.dylib
 
-# Ignore cached data
-*.cache
+# Ignore compiled language files
+*.class
+*.jar
+*.o
+*.out
+*.pdb
+*.idb
+*.ilk
 
-# Ignore generated documentation
-/build/
-docs/
+# Ignore virtual environment files (pipenv)
+Pipfile.lock
+*.venv/
+.venv/
+env/
+venv/
 
-# Ignore IDE-specific directories
-.idea/
-*.code-workspace
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
 
-# Ignore Visual Studio specific files
-.vs/
-*.suo
-*.user
-*.userprefs
-*.sln.docstates
+# Ignore Python log files
+*.log
+*.coverage
+coverage/
+*.cover
+
+# Ignore database files
+*.db
+*.sqlite
+
+# Ignore HTML files
+*.html
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Node.js related files
+node_modules/
+npm-debug.log
+yarn-error.log
 
 # Ignore Docker related files
 .dockerignore
@@ -32,85 +55,31 @@ docker-compose.yml
 *.yml
 *.cfg
 *.conf
+*.json
 
 # Ignore system-specific backup files
 *.bak
 
-# Ignore database files
-*.db
-*.sqlite
+# Ignore IDE-specific directories and files
+.idea/
+*.code-workspace
 
-# Ignore test result files
-*.xml
-*.coverage
-
-# Ignore virtual environment files (pipenv)
-Pipfile.lock
-*.venv/
-.venv/
-
-# Ignore Python bytecode
-__pycache__/
-*.py[cod]
-
-# Ignore HTML files
-*.html
-
-# Ignore ISO files
-*.iso
-
-# Ignore Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Ignore Node.js related files
-node_modules/
-
-# Ignore package manager directories
-npm-debug.log
-yarn-error.log
-
-# Ignore compiled code directories
-dist/
-build/
-
-# Ignore compiled language files
-*.class
-*.jar
-
-# Ignore compiled C/C++ files
-*.o
-*.out
-
-# Ignore macOS specific files
-.AppleDouble
-.DS_Store
-
-# Ignore system files
-Thumbs.db
-Desktop.ini
-
-# Ignore log files
+# Visual Studio specific files
+.vs/
+.vs/*
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.ncb
+*.sdf
+*.opensdf
+*.aps
 *.log
-
-# Ignore coverage files
-coverage/
-*.cover
-
-# Ignore Python wheel files
-*.whl
-
-# Ignore distribution files
-*.tar.gz
-*.zip
-
-# Ignore PSD files
-*.psd
-
-# Ignore other non-source files
-*.info
-*.pak
-*.tmp
-*.bak
+*.cache
 
 # Ignore Visual Studio build artifacts
 Debug/
@@ -120,16 +89,22 @@ x86/
 bin/
 obj/
 
-# Ignore other compilation files
-*.pdb
-*.idb
-*.ilk
-*.log
+# Ignore system files
+Thumbs.db
+Desktop.ini
+
+# Ignore temporary and cache files
+*.tmp
+*.swp
+*.swo
+*.orig
+*.rej
 
 # Ignore additional irrelevant project files
-*.tmp
-*.cache
-*.out
-*.class
-*.jar
-*.pb
+*.info
+*.pak
+*.zip
+*.tar.gz
+*.whl
+dist/
+build/
