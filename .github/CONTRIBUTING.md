@@ -7,11 +7,6 @@ We want to keep it as easy as possible to contribute changes. These guidelines a
 
 If you're new to [GitHub][github], you may want to begin with [Getting Started with GitHub](https://help.github.com/en/categories/getting-started-with-github) and Thinkful's [GitHub Pull Request Tutorial](https://www.thinkful.com/learn/github-pull-request-tutorial/).
 
-## Language
-
-As NorthernL1ghts creates his videos about SamaritanCore in English, the devs ask to keep the code base, issues and pull requests in English only.
-Thanks for your understanding.
-
 ## Reporting Bugs
 
 Bugs should be reported on our [GitHub Issue Tracker][issue-tracker] using the bug report template.
